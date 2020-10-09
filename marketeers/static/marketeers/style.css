@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+.navbar-fixed-top {
+  top: -70px; /* you'll have to figure out the exact number here */
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+  position: relative; /* this can also be static */
+}
+
+.nav-link{
+    color: white;	
+}
+.navbar-brand img{
+  height: 35px;
+  /* put value of image height as your need */
+  
+}
+.navbar{
+	background-color:black;
+	height: 80px;
+}
+.center-buttons{
+	height: 100%;
+}
+
+
+@media screen and (min-width: 576px) {
+.thumbnail {
+    position: relative;
+    display: inline-block;
+}
+.rowoverlay{
+	position: absolute;
+	top: 30%;
+	left:0;
+	z-index:1;
+	bottom:0;
+	right:0;
+	height:100%;
+}
+
+.coloverlay-text{
+	position: absolute;
+	top: 15%;
+	left:0;
+	z-index:1;
+	bottom:0;
+	right:0;
+	height:100%;
+}
+.display-3{
+	color:white;
+	font-weight: bold;
+}
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+}
+
+@media screen and (max-width: 576px) {
+.img-landscape{
+	display: none;
+}
+.coloverlay-text{
+	position: relative;
+	top: 0;
+	left:0;
+	z-index:1;
+	bottom:0;
+	right:0;
+	height:100%;
+}
+.display-3{
+	font-weight: bold;
+}
+}
+.text-detail{
+	font-size:20px;
+	font-weight: bold;
+}
+.footer-text{
+	font-size:10px;
+}
+

@@ -1,0 +1,949 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Three Marketers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  
+  
+.backgrounddd {
+  background-image: url('static/marketeers/images/Astronaut.png');
+  width:100%; /*or 70%, or what you want*/
+  height:100vh; /*or 70%, or what you want*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navmenue
+{
+    margin-top:50px;
+}
+
+.navmenue a
+{
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    line-height:30px;
+    margin-left:20px;
+}
+
+.sidelongdiv1
+{
+   background-color: #22b573b8;
+
+    height:100vh;
+    width:100%;
+	
+   
+   /* border-right:1px solid #fff;*/
+   
+}
+
+
+.sidelongdiv2
+{
+   background-color: #38c682b8;
+
+   height:100vh;
+    width:100%;
+    opacity:0.8;
+   /* border-right:1px solid #fff;*/
+}
+.sidelongdiv3
+{
+   background-color: #65d69ab8;
+
+    height:100vh;
+    width:100%;
+    opacity:0.8;
+   /* border-right:1px solid #fff;*/
+}
+
+.contentdetaildiv3
+{
+   background-color: #000;
+
+    height:100vh;
+    width:100%;
+    opacity:0.8;
+   /* border-right:1px solid #fff;*/
+}
+
+
+.sidelongdiv1img
+{
+    height:100vh;
+    width:100%;
+ background:url('static/marketeers/images/Events.png') center center no-repeat;
+}
+.sidelongdiv2img
+{
+    height:100vh;
+    width:100%;
+ background:url('static/marketeers/images/MediaBuying.png') center center no-repeat;
+}
+.sidelongdiv3img
+{
+    height:100vh;
+    width:100%;
+ background:url('static/marketeers/images/AdFilms.png') center center no-repeat;
+}
+
+
+.maintitleheading1{
+    font-size:24px;
+    text-align:center;
+    color:#fff;
+    padding-top:50px;
+    display:none;
+}
+
+.maintitlepera1{
+    text-align:center;
+    color:#fff;
+    padding:30px;
+    display:none;
+    font-size:20px;
+}
+.maintitleheading2{
+    font-size:24px;
+    text-align:center;
+    color:#fff;
+    padding-top:50px;
+    display:none;
+}
+
+.maintitlepera2{
+    text-align:center;
+    color:#fff;
+    padding:30px;
+    display:none;
+    font-size:20px;
+}
+.maintitleheading3{
+    font-size:24px;
+    text-align:center;
+    color:#fff;
+    padding-top:50px;
+    display:none;
+}
+
+.maintitlepera3{
+    text-align:center;
+    color:#fff;
+    padding:30px;
+    display:none;
+    font-size:20px;
+}
+
+.eventsmaindiv
+{
+    background:url('static/marketeers/images/BGEvents.png') center center no-repeat;
+	
+}
+.mediamaindiv
+{
+    background:url('static/marketeers/images/mediabuyingback.png') center center no-repeat;
+}
+.adfilmsmaindiv
+{
+    background:url('static/marketeers/images/adfilmsback.png') center center no-repeat;
+}
+.sidemenubg
+{
+    height:100vh;
+    background:url('static/marketeers/images/sidemenubg.png') no-repeat;
+
+}
+
+.goarrowevent
+{
+    display:none;
+}
+.bgblack
+{
+    background: #000;
+  width:100%; /*or 70%, or what you want*/
+  height:100vh; /*or 70%, or what you want*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contentdetail
+{
+    background: url('static/marketeers/images/Astronaut.png');
+    display:none;
+    color:#fff;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+.row.heading h2 {
+    color: #fff;
+    font-size: 52.52px;
+    line-height: 95px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.heading.heading-icon {
+    display: block;
+}
+.padding-lg {
+	display: block;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.practice-area.padding-lg {
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+.practice-area .inner{ 
+     border:1px solid #999999; 
+	 text-align:center; 
+	 margin-bottom:28px; 
+	 padding:40px 25px;
+}
+.our-webcoderskull .cnt-block:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border: 0;
+}
+.practice-area .inner h3{ 
+    color:#3c3c3c; 
+	font-size:24px; 
+	font-weight:500;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 0;
+}
+.practice-area .inner p{ 
+    font-size:14px; 
+	line-height:22px; 
+	font-weight:400;
+}
+.practice-area .inner img{
+	display:inline-block;
+}
+
+
+
+.our-webcoderskull .cnt-block{ 
+   
+   width:100%; 
+   text-align:center; 
+   margin: 0 0 28px;
+}
+.our-webcoderskull .cnt-block figure{
+   width:148px; 
+   height:148px; 
+   border-radius:100%; 
+   display:inline-block;
+   margin-bottom: 15px;
+}
+.our-webcoderskull .cnt-block img{ 
+   width:158px; 
+   height:158px;
+   background:#3a3434b8;
+   border-radius:100%;
+   border:5px solid #3a3434b8;
+}
+
+.our-webcoderskull .cnt-block img:hover{ 
+   width:158px; 
+   height:158px;
+   background:#3a3434b8;
+   border-radius:100%;
+   border:5px solid #22b573b8;
+}
+
+.our-webcoderskull .cnt-block h3{ 
+   color:#fff; 
+   font-size:13px; 
+   font-weight:bold; 
+   text-transform:uppercase;
+}
+.our-webcoderskull .cnt-block h3 a{
+  text-decoration:none;
+	color:#fff;
+	font-size:13px;
+}
+.our-webcoderskull .cnt-block h3 a:hover{
+	color:#fff;
+}
+.our-webcoderskull .cnt-block p{ 
+   color:#fff; 
+   font-size:12px; 
+   line-height:13px; 
+   font-weight:400;
+}
+.our-webcoderskull .cnt-block .follow-us{
+	margin:20px 0 0;
+}
+.our-webcoderskull .cnt-block .follow-us li{ 
+    display:inline-block; 
+	width:auto; 
+	margin:0 5px;
+}
+.our-webcoderskull .cnt-block .follow-us li .fa{ 
+   font-size:24px; 
+   color:#fff;
+}
+.our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
+   color:#1cb674;
+}
+
+
+.contact-block
+{
+   background:#3a3434b8; 
+   padding:20px;
+}
+
+.clientsblock
+{
+    background:#3a3434b8;
+    height:200px;
+    margin-bottom:30px;
+}
+
+.center-hv {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+  </style>
+  
+</head>
+<body>
+<div class="container-fluid backgrounddd" id="backgrounddddd">
+   <div  style="padding:0px;" class="row">
+       <div style="padding:0px;" class="col-md-12">
+			<div class="col-md-3" id="lleft-side" style="display:none">
+				<div class="lteam" style="margin-top:10px;color:#fff;padding:10px;display:none">
+					<div>
+						<h1><span>Team</span></h1>
+					</div>					
+					<div class="row">						
+						<div class="col-md-6">
+						<hr>
+						<h1>{{team_members|length}}+</h1>						
+						</div>
+						<div class="col-md-6"></div>
+					</div>
+					<div class="row">						
+						<div class="col-md-11">
+						<p><span>Kickass Events planed and executed to perfection Kickass Events planed and executed to perfection</span></p>
+						</div>
+					</div>					
+				</div>
+				<div class="lclient" style="margin-top:10px;color:#fff;padding:10px;display:none">
+					<div>
+						<h1><span>Clients</span></h1>
+					</div>					
+					<div class="row">						
+						<div class="col-md-6">
+						<hr>
+						<h1>{{clients|length}}+</h1>						
+						</div>
+						<div class="col-md-6"></div>
+					</div>
+					<div class="row">						
+						<div class="col-md-11">
+						<p><span>Kickass Events planed and executed to perfection Kickass Events planed and executed to perfection</span></p>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="col-md-6 overflow-auto" style="padding:0px;height:100vh;overflow: auto;display:none" id="lmiddle-side">	
+				<div id="lmiddleteam-side" style="margin-top:5%;padding:10px;color:#fff;display:none">
+					<div class="row">
+					{% for team_member in team_members %}
+						{% with team_member.id|stringformat:"s" as team_member_id %}
+							<div class="col-md-4">
+							<svg style="margin-bottom:-35px;margin-left:35px">								
+								<ellipse id="Ellipse_{{team_member_id}}" rx="50.5" ry="50.5" cx="50.5" cy="50.5">
+								</ellipse>																							
+							</svg>
+							<center>
+							<p>{{team_member.name}}</p>
+							<p>{{team_member.role}}</p>
+							</center>
+						</div>
+						{% if forloop.counter|divisibleby:3 %}
+							</div><div class="row">
+						{% endif %}
+						{% endwith %}
+					{% endfor %}
+					</div>
+					<!--<ul style="font-size:16px;">
+					{% for team_member in team_members %}
+					{% with team_member.id|stringformat:"s" as team_member_id %}
+						<li  style="color:#fff;" id="team-{{team_member_id}}" onclick="calleventsel({{team_member_id}})">{{team_member.name}}</li>
+						<li  style="color:#fff;" id="team-role-{{team_member_id}}" onclick="calleventsel({{team_member_id}})">{{team_member.role}}</li>
+						<li  style="color:#fff;" id="team-image-{{team_member_id}}" onclick="calleventsel({{team_member_id}})">{{team_member.image}}</li>
+					{% endwith %}
+						<hr>
+					{% endfor %}                                           
+					</ul>-->
+				</div>
+				<div id="lmiddleclient-side" class="overflow-auto" style="margin-top:5%;padding:10px;color:#fff;display:none">
+					<div class="row">
+					{% for client in clients %}
+						{% with client.id|stringformat:"s" as client_id %}
+							<div class="col-md-4">
+							<svg style="margin-bottom:-35px;margin-left:35px">								
+								<ellipse id="Ellipse_{{client_id}}" rx="50.5" ry="50.5" cx="50.5" cy="50.5">
+								</ellipse>																							
+							</svg>
+							<center>
+							<p>{{client.name}}</p>
+							<p>{{client.role}}</p>
+							</center>
+						</div>
+						{% if forloop.counter|divisibleby:3 %}
+							</div><div class="row">
+						{% endif %}
+						{% endwith %}
+					{% endfor %}
+					</div>					
+				</div>
+			</div>
+			<div  style="padding:0px;;display:none" class="col-md-3" id="lright-side">
+			   <div class="navmenue">                   
+				   <a onclick="callteam()">Team</a><br>
+				   <a onclick="callclient()">Clients</a><br>
+				   <a onclick="callcontact()">Contact</a><br>
+			   </div>
+			   <div style="margin-top: 11%;">
+			   <img style="display: block; max-height: 330px; margin-left: auto; margin-right: auto; padding-right:3%" id="llogotwo" src="{% static 'marketeers/images/logoleft.png' %}" class="img-responsive"></div>			   			  
+			</div>
+           <div  style="padding:0px;" class="col-md-10" id="leftsidee">
+               <div class="navmenue">                   
+                   <a href="#" onclick="callteam()">Team</a><br>
+                   <a href="#" onclick="callclient()">Clients</a><br>
+                   <a href="#" onclick="callcontact()">Contact</a><br>
+               </div>
+               <div style="margin-top: 11%;"><img id="logoone" style="margin-left: 1%;" src="{% static 'marketeers/images/Logo.png' %}" class="img-responsive">
+               <img style="display: none; max-height: 330px; margin-left: auto; margin-right: auto; padding-right:3%" id="logotwo" src="{% static 'marketeers/images/logoleft.png' %}" class="img-responsive"></div>
+               
+              <center><p style="color:#FFF;margin-top:-5%;margin-left:18%" id="aboutusarrow" onclick="calleventss('7')"> ABOUT US<br><img src="{% static 'marketeers/images/arrowbottom.png' %}" onclick="calleventss('7')"></p></center>
+           </div>
+           
+           
+           
+           <div class="col-md-2" style="padding:0px;" id="rightsidee">
+              <div class="col-md-3"  style="padding:0px;padding-top:50vh;padding-right:20px;" id="arrowmain">
+                 <img style="float:right" src="{% static 'marketeers/images/Leftarrow.png' %}" class="leftarrow">
+              </div>
+              
+              <div id="geteventsdetaildata">
+              <div class="col-md-3 eventsmaindiv"  style="padding:0px;" id="eventsmain">
+                  <div class="sidelongdiv1">
+					  <div>
+                      <p class="maintitleheading1 eventsmaindivf" onclick="calleventss('1')">EVENTS</p>
+                      <input type="hidden" id="divid1" value="1">
+                      <p class="maintitlepera1">Kickass events planed and executed to perfection</p>
+					  <div class="col-md-4 eventdiv1" style="display:none">
+						<h3 style="color:#fff;">EVENTS</h3>
+						<p style="color:#fff;">Kickass events planed and executed to perfection</p>
+						</br>
+						<ul style="font-size:16px;">
+						{% for event in events %}
+						{% with event.id|stringformat:"s" as event_id %}
+							<li  style="color:#fff;cursor: pointer;" id="event-{{event_id}}" onclick="calleventsel({{event_id}})">{{event.name}}</li>
+						{% endwith %}
+							<hr>
+						{% endfor %}                                           
+						</ul>	
+					  </div>
+					  <div class="col-md-8 eventdiv2" style="height:100vh;background-color:#fff;display:none">
+						<div class="col-md-1" style="margin-top:5%"></div>
+							{% for event in events %}
+							{% with event.id|stringformat:"s" as event_id %}
+							<div class="event-{{event_id}} col-md-10" style="display:none;margin-top:5%">							
+								<b><h4>{{event.heading}}</h4></b><br>
+								<p style="word-break: break-word;">{{event.desc}}</p>
+								<center><image src={{event.image.url|slice:"10:"}} style='position:height: 100%; width: 100%;'></image></center>
+							{% endwith %}								
+							</div>
+							{% endfor %} 
+						<div class="col-md-1" style="margin-top:5%"></div>
+					  </div>					  				 
+                  <div class="sidelongdiv1img"></div>
+                 <center> <img src="{% static 'marketeers/images/goarrow.png' %}" class="goarrowevent goarrow"></center></div>
+                  </div>
+              </div>
+              
+               <div class="contentdetail"  style="padding:0px;">
+                   <div style="overflow-y:scroll;height:100vh;padding:20px;">
+                   <h2>Events</h2>
+                   <div>
+                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                   <br><br><br>
+                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br><br>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                   </div>
+                   
+                   </div>
+               </div>
+               
+               
+              <div class="col-md-3 mediamaindiv"  style="padding:0px;" id="mediamain">
+                  
+					<div class="sidelongdiv2"> 
+					<p class="maintitleheading2" onclick="calleventss('2')">MEDIA BUYING</p>
+					<p class="maintitlepera2">Making sure you get seen and not just left on read</p>
+					<div class="col-md-4 mediadiv1" style="display:none">
+						<h3 style="color:#fff;">MEDIA BUYING</h3>
+						<p style="color:#fff;">Making sure you get seen and not just left on read</p>
+						</br>
+						<ul style="font-size:16px;">
+							{% for media in medias %}
+							{% with media.id|stringformat:"s" as media_id %}
+								<li  style="color:#fff;cursor: pointer;" id="media-{{media_id}}" onclick="callmediasel({{media_id}})">{{media.name}}</li>
+							{% endwith %}
+								<hr>
+							{% endfor %}                                            
+						</ul>	
+					  </div>
+					  <div class="col-md-8 mediadiv2" style="height:100vh;background-color:#fff;display:none">
+						<div class="col-md-1" style="margin-top:5%"></div>
+							{% for media in medias %}
+							{% with media.id|stringformat:"s" as media_id %}
+							<div class="media-{{media_id}} col-md-10" style="display:none;margin-top:5%">							
+								<b><h4>{{media.heading}}</h4></b><br>
+								<p>{{media.desc}}</p>
+								<center><image src={{media.image.url|slice:"10:"}} style='position:height: 100%; width: 100%;'></image></center>
+							{% endwith %}								
+							</div>
+							{% endfor %} 
+						<div class="col-md-1" style="margin-top:5%"></div> 
+					</div>
+					<div class="sidelongdiv2img"></div>					
+					<center> <img src="{% static 'marketeers/images/goarrow.png' %}" class="goarrowevent goarrow"></center>
+					</div>
+           
+              </div>
+              <div class="col-md-3 adfilmsmaindiv"  style="padding:0px;" id="adfilsmmain">
+					<div class="sidelongdiv3" >
+						<p class="maintitleheading3" onclick="calleventss('3')">AD FILMS</p>
+						<p class="maintitlepera3">We shoot for Stars!</p>
+						<div class="col-md-4 addiv1" style="display:none">
+						<h3 style="color:#fff;">AD FILMS</h3>
+						<p style="color:#fff;">We shoot for Stars!</p>
+						</br>
+						<ul style="font-size:16px;">
+							{% for ad in ads %}
+							{% with ad.id|stringformat:"s" as ad_id %}
+								<li  style="color:#fff;cursor: pointer;" id="ad-{{ad_id}}" onclick="calladsel({{ad_id}})">{{ad.name}}</li>
+							{% endwith %}
+								<hr>
+							{% endfor %}                                            
+						</ul>	
+					  </div>
+					  <div class="col-md-8 addiv2" style="height:100vh;background-color:#fff;display:none">			
+						<div class="col-md-1" style="margin-top:5%"></div>
+							{% for ad in ads %}
+							{% with ad.id|stringformat:"s" as ad_id %}
+							<div class="ad-{{ad_id}} col-md-10" style="display:none;margin-top:5%">							
+								<b><h4>{{ad.heading}}</h4></b><br>
+								<p>{{ad.desc}}</p>
+								<center><image src={{ad.image.url|slice:"10:"}} style='position:height: 100%; width: 100%;'></image></center>
+							{% endwith %}								
+							</div>
+							{% endfor %} 
+						<div class="col-md-1" style="margin-top:5%"></div> 
+					</div>						
+						<div class="sidelongdiv3img"></div>					
+						<center> <img src="{% static 'marketeers/images/goarrow.png' %}" class="goarrowevent goarrow"></center>					
+                               
+              </div>
+            </div>  
+            </div>  
+           </div>
+           
+       </div>
+   </div>
+    
+</div>
+
+<script>
+    $('.leftarrow').click(function() {
+	$("#lleft-side").css("display","none");
+	$("#lmiddle-side").css("display","none");
+	$("#lright-side").css("display","none");
+    $("#backgrounddddd").removeClass('backgrounddd');
+    $("#backgrounddddd").addClass('bgblack');
+    $("#leftsidee").removeClass('col-md-10');
+    $("#rightsidee").removeClass('col-md-2');
+    $("#leftsidee").addClass('col-md-3 sidemenubg');
+    $("#rightsidee").addClass('col-md-9');
+    $("#logoone").css("display", "none");
+    $("#arrowmain").css("display", "none");
+    $("#aboutusarrow").css("display", "none");
+    $("#logotwo").css("display", "block");	
+    $(".maintitleheading1").css("display", "block");
+    $(".maintitlepera1").css("display", "block");
+    $(".maintitleheading2").css("display", "block");
+    $(".maintitlepera2").css("display", "block");
+    $(".maintitleheading3").css("display", "block");
+    $(".maintitlepera3").css("display", "block");
+    $(".sidemenubg").css("display", "block");
+    $(".goarrowevent").css("display", "block");
+    $(".sidelongdiv3img").css("display", "none");
+    $(".sidelongdiv2img").css("display", "none");
+    $(".sidelongdiv1img").css("display", "none");
+    $("#eventsmain").removeClass('col-md-3');
+    $("#eventsmain").addClass('col-md-4');
+	$(".eventdiv1").css("display", "none");
+	$(".eventdiv2").css("display", "none");
+    $("#mediamain").removeClass('col-md-3');
+    $("#mediamain").addClass('col-md-4');
+	$(".mediadiv1").css("display", "none");
+	$(".mediadiv2").css("display", "none");
+    $("#adfilsmmain").removeClass('col-md-3');
+    $("#adfilsmmain").addClass('col-md-4');
+	$(".addiv1").css("display", "none");
+	$(".addiv2").css("display", "none");
+});
+
+
+
+ $('.goarrow').click(function() {
+	$("#lleft-side").css("display","none");
+	$("#lmiddle-side").css("display","none");
+	$("#lright-side").css("display","none");
+      $("#backgrounddddd").addClass('backgrounddd');
+      $("#backgrounddddd").removeClass('bgblack');
+      $("#rightsidee").addClass('col-md-2');
+      $("#rightsidee").removeClass('col-md-9');
+       $("#leftsidee").addClass('col-md-10');
+       $("#leftsidee").removeClass('col-md-3 sidemenubg');
+       $("#logotwo").css("display", "none");
+       $("#logoone").css("display", "block");
+       $(".sidelongdiv3img").css("display", "block");
+    $(".sidelongdiv2img").css("display", "block");
+    $(".sidelongdiv1img").css("display", "block");
+    $(".maintitleheading1").css("display", "none");
+    $(".maintitlepera1").css("display", "none");
+     $(".maintitleheading2").css("display", "none");
+    $(".maintitlepera2").css("display", "none");
+     $(".maintitleheading3").css("display", "none");
+    $(".maintitlepera3").css("display", "none");
+    $(".goarrowevent").css("display", "none");
+    $("#arrowmain").css("display", "block");
+    $("#aboutusarrow").css("display", "block");
+    $("#eventsmain").removeClass('col-md-4');
+    $("#eventsmain").addClass('col-md-3');
+	$(".eventdiv1").css("display", "none");
+	$(".eventdiv2").css("display", "none");
+    $("#mediamain").removeClass('col-md-4');
+    $("#mediamain").addClass('col-md-3');
+	$(".mediadiv1").css("display", "none");
+	$(".mediadiv2").css("display", "none");
+    $("#adfilsmmain").removeClass('col-md-4');
+    $("#adfilsmmain").addClass('col-md-3');
+	$(".addiv1").css("display", "none");
+	$(".addiv2").css("display", "none");
+});
+
+
+
+$('.maintitleheading1,.sidelongdiv1img').click(function() {
+	$("#lleft-side").css("display","none");
+	$("#lmiddle-side").css("display","none");
+	$("#lright-side").css("display","none");
+	$("#backgrounddddd").removeClass('backgrounddd');
+    $("#backgrounddddd").addClass('bgblack');
+    $("#logoone").css("display", "none");
+    $("#arrowmain").css("display", "none");
+    $("#aboutusarrow").css("display", "none");
+    $("#logotwo").css("display", "block");
+	$("#leftsidee").removeClass('col-md-2');
+	$("#leftsidee").addClass('col-md-3 sidemenubg');
+	$(".sidemenubg").css("display", "block");
+	$("#rightsidee").removeClass('col-md-10');
+	$("#rightsidee").removeClass('col-md-2');
+	$("#rightsidee").addClass('col-md-9');
+    $(".maintitleheading1").css("display", "none");
+    $(".maintitlepera1").css("display", "none");
+    $(".maintitleheading2").css("display", "none");
+    $(".maintitlepera2").css("display", "none");
+    $(".maintitleheading3").css("display", "none");
+    $(".maintitlepera3").css("display", "none");
+    $(".goarrowevent").css("display", "none");
+    $(".sidelongdiv3img").css("display", "block");
+    $(".sidelongdiv2img").css("display", "block");
+    $(".sidelongdiv1img").css("display", "block");
+	$("#eventsmain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#eventsmain").addClass('col-md-10');
+	$(".eventdiv1").css("display", "block");
+	$(".eventdiv2").css("display", "block");
+    $("#mediamain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#mediamain").addClass('col-md-1');
+	$(".mediadiv1").css("display", "none");
+	$(".mediadiv2").css("display", "none");
+    $("#adfilsmmain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#adfilsmmain").addClass('col-md-1');
+	$(".addiv1").css("display", "none");
+	$(".addiv2").css("display", "none");
+});
+
+$('.maintitleheading2,.sidelongdiv2img').click(function() {
+	$("#lleft-side").css("display","none");
+	$("#lmiddle-side").css("display","none");
+	$("#lright-side").css("display","none");
+	$("#backgrounddddd").removeClass('backgrounddd');
+    $("#backgrounddddd").addClass('bgblack');
+    $("#logoone").css("display", "none");
+    $("#arrowmain").css("display", "none");
+    $("#aboutusarrow").css("display", "none");
+    $("#logotwo").css("display", "block");
+	$("#leftsidee").removeClass('col-md-2');
+	$("#leftsidee").addClass('col-md-3 sidemenubg');
+	$(".sidemenubg").css("display", "block");
+	$("#rightsidee").removeClass('col-md-10');
+	$("#rightsidee").removeClass('col-md-2');
+	$("#rightsidee").addClass('col-md-9');
+    $(".maintitleheading1").css("display", "none");
+    $(".maintitlepera1").css("display", "none");
+    $(".maintitleheading2").css("display", "none");
+    $(".maintitlepera2").css("display", "none");
+    $(".maintitleheading3").css("display", "none");
+    $(".maintitlepera3").css("display", "none");
+    $(".goarrowevent").css("display", "none");
+    $(".sidelongdiv3img").css("display", "block");
+    $(".sidelongdiv2img").css("display", "block");
+    $(".sidelongdiv1img").css("display", "block");
+    $("#eventsmain").removeClass('col-md-4');
+	$("#eventsmain").removeClass('col-md-3');
+    $("#eventsmain").addClass('col-md-1');
+	$(".eventdiv1").css("display", "none");
+	$(".eventdiv2").css("display", "none");
+    $("#mediamain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#mediamain").addClass('col-md-10');
+	$(".mediadiv1").css("display", "block");
+	$(".mediadiv2").css("display", "block");
+    $("#adfilsmmain").removeClass('col-md-4');
+	$("#adfilsmmain").removeClass('col-md-3');
+    $("#adfilsmmain").addClass('col-md-1');
+	$(".addiv1").css("display", "none");
+	$(".addiv2").css("display", "none");
+});
+
+$('.maintitleheading3,.sidelongdiv3img').click(function() {
+	$("#lleft-side").css("display","none");
+	$("#lmiddle-side").css("display","none");
+	$("#lright-side").css("display","none");
+	$("#backgrounddddd").removeClass('backgrounddd');
+    $("#backgrounddddd").addClass('bgblack');
+    $("#logoone").css("display", "none");
+    $("#arrowmain").css("display", "none");
+    $("#aboutusarrow").css("display", "none");
+    $("#logotwo").css("display", "block");
+	$("#leftsidee").removeClass('col-md-2');
+	$("#leftsidee").addClass('col-md-3 sidemenubg');
+	$(".sidemenubg").css("display", "block");
+	$("#rightsidee").removeClass('col-md-10');
+	$("#rightsidee").removeClass('col-md-2');
+	$("#rightsidee").addClass('col-md-9');
+    $(".maintitleheading1").css("display", "none");
+    $(".maintitlepera1").css("display", "none");
+    $(".maintitleheading2").css("display", "none");
+    $(".maintitlepera2").css("display", "none");
+    $(".maintitleheading3").css("display", "none");
+    $(".maintitlepera3").css("display", "none");
+    $(".goarrowevent").css("display", "none");
+    $(".sidelongdiv3img").css("display", "block");
+    $(".sidelongdiv2img").css("display", "block");
+    $(".sidelongdiv1img").css("display", "block");
+	$("#eventsmain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#eventsmain").addClass('col-md-1');
+	$(".eventdiv1").css("display", "none");
+	$(".eventdiv2").css("display", "none");
+    $("#mediamain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#mediamain").addClass('col-md-1');
+	$(".mediadiv1").css("display", "none");
+	$(".mediadiv2").css("display", "none");
+    $("#adfilsmmain").removeClass('col-md-4 col-md-3 col-md-1');
+    $("#adfilsmmain").addClass('col-md-10');
+	$(".addiv1").css("display", "block");
+	$(".addiv2").css("display", "block");
+});
+
+function calleventsel(id)
+{
+	$("div[class^='event-']").css("display", "none");
+	$(".event-"+id).css("display", "block");
+};
+
+function callmediasel(id)
+{
+	$("div[class^='media-']").css("display", "none");
+	$(".media-"+id).css("display", "block");	
+};
+
+function calladsel(id)
+{
+	$("div[class^='ad-']").css("display", "none");
+	$(".ad-"+id).css("display", "block");	
+};
+
+function callteam()
+{
+	$("#rightsidee").css("display","none");
+    $("#leftsidee").css("display","none");
+	$("#lleft-side").css("display","block");
+	$("#lmiddle-side").css("display","block");
+	$("#lright-side").css("display","block");
+	$(".lteam").css("display","block");
+	$(".lclient").css("display","none");
+	$("#lmiddleteam-side").css("display","block");
+	$("#lmiddleclient-side").css("display","none");
+	$("div[class^='team-']").css("display", "block");
+	$("div[class^='client-']").css("display", "none");
+	$("div[class^='contact-']").css("display", "none");
+};
+
+function callclient()
+{
+	$("#rightsidee").css("display","none");
+    $("#leftsidee").css("display","none");
+	$("#lleft-side").css("display","block");
+	$("#lmiddle-side").css("display","block");
+	$("#lright-side").css("display","block");
+	$(".lteam").css("display","none");
+	$(".lclient").css("display","block");
+	$("#lmiddleteam-side").css("display","none");
+	$("#lmiddleclient-side").css("display","block");
+	$("div[class^='team-']").css("display", "none");
+	$("div[class^='client-']").css("display", "block");
+	$("div[class^='contact-']").css("display", "none");	
+};
+
+function callcontact()
+{	
+	$("#rightsidee").css("display","none");
+    $("#leftsidee").css("display","none");
+	$("#lleft-side").css("display","block");
+	$("#lmiddle-side").css("display","block");
+	$("#lright-side").css("display","block");
+	$(".lteam").css("display","none");
+	$(".lclient").css("display","none");
+	$(".lcontact").css("display","block");
+	$("#lmiddleteam-side").css("display","none");
+	$("#lmiddleclient-side").css("display","none");
+	$("#lmiddlecontact-side").css("display","block");
+	$("div[class^='team-']").css("display", "none");
+	$("div[class^='client-']").css("display", "none");
+	$("div[class^='contact-']").css("display", "block");
+};
+
+/*function calleventss(id)
+{
+  
+  if(id==4 || id==5 || id==6 || id==7)
+  {
+   
+    $("#leftsidee").removeClass('col-md-10');
+    $("#leftsidee").addClass('col-md-2 sidemenubg');
+    $("#rightsidee").removeClass('col-md-2');
+    $("#rightsidee").addClass('col-md-10');
+    $("#logotwo").css("display", "block");
+    $("#logoone").css("display", "none");
+    $("#arrowmain").css("display", "none");
+    $("#aboutusarrow").css("display", "none");
+    $("#eventsmain").removeClass('col-md-3');
+    $("#eventsmain").addClass('col-md-4');
+    $("#mediamain").removeClass('col-md-3');    
+    $("#adfilsmmain").removeClass('col-md-3');
+    
+    
+    
+    
+}
+ 
+$("#rightsidee").removeClass('col-md-9');
+$("#rightsidee").addClass('col-md-10');
+$("#leftsidee").removeClass('col-md-3');
+$("#leftsidee").addClass('col-md-2');
+$("#logotwo").css("height", "300px");
+$("#logotwo").css("margin-top", "60%");
+
+
+    var divid = $("#divid1").val();
+ 
+ if(id==2)
+ {
+    var  url = "getmediabuying.php"; 
+ }
+ else if(id==3)
+ {
+    var  url = "getadfilms.php"; 
+ }
+ else
+ {
+      var  url = "getevents.php";
+ }
+    
+ 
+    
+    $.ajax({  
+        type: "GET",
+        data:{
+          id:id,
+          divid:divid
+        },
+        url: url,             
+        dataType: "html",               
+        success: function(response){  
+        $("#geteventsdetaildata").html(response); 
+        $("#divid1").val(id);
+        }
+
+    });
+}
+*/
+
+
+</script>
+</body>
+</html>
