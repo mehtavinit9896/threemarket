@@ -25,7 +25,7 @@ SECRET_KEY = 'i(4(^jgro%g8*si-2c(sn*=%fe7mn_cgdbc!*6eu%rq+)&3ic_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://mehtavinit9896.pythonanywhere.com/']
 
 
 # Application definition
